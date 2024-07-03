@@ -1,0 +1,96 @@
+#works {
+  min-height: calc(100vh - 4rem);
+  width: 100vw;
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.workTitle {
+  margin: 1rem 0;
+  font-size: 3rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.worksDesc {
+  font-size: 1rem;
+  font-weight: 300;
+  max-width: 45rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.worksImages {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 65rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.worksImage {
+  object-fit: cover;
+  height: 20rem;
+  width: calc(33.33% - 1rem);
+  margin: 0.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.worksImage:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.workBtn {
+  padding: 0.5rem 2.5rem;
+  margin: 3rem 0;
+  border: none;
+  border-radius: 2rem;
+  background: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.workBtn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .worksImage {
+    height: 18rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .worksImage {
+    height: 16rem;
+    width: calc(50% - 1rem);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .worksImage {
+    height: 14rem;
+    width: calc(100% - 1rem);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

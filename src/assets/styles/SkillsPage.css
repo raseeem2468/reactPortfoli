@@ -1,0 +1,140 @@
+#skills {
+  overflow: hidden;
+  width: 100vw;
+  max-width: 65rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.skillTitle {
+  font-size: 3rem;
+  font-weight: 600;
+  padding-top: 3rem;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.skillDesc {
+  font-weight: 400;
+  font-size: 0.9rem;
+  max-width: 51rem;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.skillBars {
+  margin: 1.5rem 0;
+  width: 100%;
+  max-width: 80%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideIn 1s ease-in-out;
+}
+
+.skillBars:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.skillBarImg {
+  object-fit: cover;
+  height: 3rem;
+  width: 3rem;
+  margin-right: 2rem;
+  border-radius: 0.5rem;
+}
+
+.skillBarText {
+  font-size: 0.75rem;
+  font-weight: 200;
+}
+
+.skillBarText h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.skillBarText p {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+  color: #bbb;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 720px) {
+  .skillBarText p {
+    font-size: 2vw;
+  }
+
+  .skillBarImg {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .skillBarText h2 {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skillBars {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skillBarImg {
+    margin-bottom: 1rem;
+    margin-right: 0;
+  }
+
+  .skillBarText {
+    text-align: left;
+  }
+
+  .skillBarText p {
+    font-size: 3vw;
+  }
+
+  .skillBarImg {
+    height: 2.25rem;
+    width: 2.25rem;
+  }
+
+  .skillBarText h2 {
+    font-size: 5vw;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}

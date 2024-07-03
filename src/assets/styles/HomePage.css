@@ -1,0 +1,137 @@
+#intro {
+  height: calc(100vh - 4rem);
+  width: 100vw;
+  max-width: 75rem;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.bg {
+  position: absolute;
+  top: -4rem;
+  right: 0;
+  z-index: -1;
+  object-fit: cover;
+  height: 100vh;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.introContent {
+  height: 100vh;
+  width: 100vw;
+  padding: 2rem;
+  font-size: 3rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: slideIn 1s ease-in-out;
+}
+
+.hello {
+  font-size: 1.75rem;
+  font-weight: 100;
+}
+
+.introName {
+  color: yellow;
+}
+
+.introPara {
+  font-size: medium;
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+}
+
+.btn {
+  background-color:transparent;
+  margin: 1rem 0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  border: 2px solid ;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  width: 120px;
+}
+
+.btn i {
+  margin-right: 0.5rem;
+}
+
+.btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .introContent {
+    padding: 1rem;
+    font-size: 2.5rem;
+  }
+
+  .btn {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .bg {
+    right: -10vw;
+  }
+
+  .introContent {
+    font-size: 2rem;
+  }
+
+  .hello {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .introContent {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    width: 90px;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .introContent {
+    font-size: 1.25rem;
+  }
+
+  .btn {
+    width: 80px;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
